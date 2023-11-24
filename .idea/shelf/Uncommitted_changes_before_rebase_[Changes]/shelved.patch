@@ -1,0 +1,38 @@
+Index: src/READM
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/READM b/src/READM
+new file mode 100644
+--- /dev/null	(date 1700819358196)
++++ b/src/READM	(date 1700819358196)
+@@ -0,0 +1,28 @@
++Design Patterns Used:
++1- Observer Pattern:
++This pattern is needed for weather monitoring system to enable multiple displays to update when weather data changes.
++
++Classes used for the pattern:
++
++WeatherDataSubject: the subject class with weather data and responsiple for notifying observers of changes.
++WeatherDataObserver (Interface): define the update method.
++CurrentConditionsDisplay and StatisticsDisplay: observers that display curent weather.
++
++
++2- Decorator Pattern
++To add new functionalities dynamically without changing the structure. This pattern is needed for adding features like diferent temp units wind speed  and precipitation information.
++Classes used for the pattern:
++
++WeatherDisplayDecorator (Abstract Class): decorator implements the WeatherDataObserver.
++Concrete Decorators: like TemperatureUnitsDecorator, WindSpeedDecorator, and PrecipitationDecorator extends WeatherDisplayDecorator.
++
++Class Diagram:
++
++
++
++
++
++
++
++Loose Coupling: The Observer pattern allow for loose coupling between the subject and observer.
++Dynamic Behavior: The Decorator pattern enable to dynamically changing the behavior of the display.
